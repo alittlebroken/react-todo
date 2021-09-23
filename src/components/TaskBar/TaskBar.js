@@ -13,6 +13,11 @@ function TaskBar(props){
 
   // process the button click
   const handleClick = () => {
+    // Don't add an empty task to the list
+    if(!taskName){
+      return;
+    }
+
     props.onAdd(taskName);
     setTaskName('');
   };
@@ -21,11 +26,16 @@ function TaskBar(props){
     <div>
 
         <input
+          className="addTask"
           value={taskName}
-          placeholder="Enter task name"
+          placeholder="Enter your task name"
           onChange={handleChange} />
 
-        <button onClick={handleClick}>Add</button>
+        <button
+          className="addTaskButton"
+          onClick={handleClick}>
+          Add
+        </button>
 
     </div>
   );
