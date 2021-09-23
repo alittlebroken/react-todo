@@ -99,7 +99,7 @@ function App() {
             status: 'open'
         }, ...prev];
     });
-    
+
     // remove task from the closed list
     removeClosedTask(task);
   };
@@ -109,17 +109,21 @@ function App() {
 
       <TaskBar onAdd={addTask} />
 
-      <TaskList
-        title="Open Tasks"
-        tasks={tasks}
-        onRemove={removeTask}
-        onCloseTask={closeTask} />
+      <div className="ListContainer">
 
-      <TaskList
-       title="Completed Tasks"
-       tasks={closedTasks}
-       onRemove={removeTask}
-       onOpen={reopenTask} />
+        <TaskList
+          title="Open Tasks"
+          tasks={tasks}
+          onRemove={removeTask}
+          onCloseTask={closeTask} />
+
+        <TaskList
+         title="Completed Tasks"
+         tasks={closedTasks}
+         onRemove={removeTask}
+         onOpen={reopenTask} />
+
+      </div>
 
     </div>
   );

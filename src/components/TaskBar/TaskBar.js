@@ -23,7 +23,7 @@ function TaskBar(props){
   };
 
   return (
-    <div>
+    <div className="addTaskContainer">
 
         <input
           className="addTask"

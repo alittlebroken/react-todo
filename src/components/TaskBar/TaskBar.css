@@ -2,19 +2,39 @@
   CSS Styles for the TaskBar Component
 */
 
+.addTaskContainer {
+  display: flex;
+  grid-template-columns: 70% 20%;
+  margin: 15px;
+}
+
 .addTask {
-  width: 70%;
   padding: 25px;
+  flex-grow: 2;
   font-size: 24px;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 15px 15px;
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  border-color: grey;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.addTask:focus {
+  outline: none;
 }
 
 .addTaskButton {
-  width: 20%;
-  border: 1px solid black;
-  border-radius: 5px;
+  border-width: 0 0 0 1px;
+  border-style: solid;
   padding: 25px;
   font-size: 24px;
+  border-radius: 0 10px 10px 0;
+  background-color: dodgerblue;
+  color: white;
+}
+
+@media only screen and (max-width: 700px){
+  .addTaskContainer {
+    grid-template-columns: auto 25%;
+  }
 }
