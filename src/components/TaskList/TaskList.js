@@ -25,9 +25,10 @@ function TaskList(props){
     <div>
       <h2>{props.title}</h2>
 
-      {taskList.map((task) => {
+      {taskList.map((task, taskIndex) => {
         return (
           <Task
+            key={`${taskIndex}-%{task}`}
             task={task}
             onRemove={props.onRemove}
             />
