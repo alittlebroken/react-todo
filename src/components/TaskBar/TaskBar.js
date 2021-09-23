@@ -20,8 +20,11 @@ function TaskBar(props){
   return (
     <div>
 
-        <input onChange={handleChange} />
-        <button onClick={handleClick}>Add Task</button>
+        <input
+          placeholder="Enter task name"
+          onChange={handleChange} />
+
+        <button onClick={handleClick}>Add</button>
 
     </div>
   );
