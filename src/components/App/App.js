@@ -29,10 +29,29 @@ function App() {
     }
   ]);
 
+  // Remove a task from the list
+  const removeTask = (task) => {
+    setTasks((prev) => {
+      return prev.filter(taskItem => taskItem.id !== task.id);
+    });
+  };
+
+  // Add a task to the list
+  const addTask = (task) => {
+    setTasks((prev) => {
+      return [{
+        id: 90001,
+        name: task
+      }, ...prev];
+    });
+  };
+
   return (
     <div className="App">
-      <TaskBar />
-      <TaskList tasks={tasks} />
+      <TaskBar onAdd={addTask} />
+      <TaskList
+        tasks={tasks}
+        onRemove={removeTask} />
     </div>
   );
 }
