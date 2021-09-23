@@ -23,7 +23,7 @@ function TaskList(props){
 
   return (
     <div>
-      <h2>Current Task List</h2>
+      <h2>{props.title}</h2>
 
       {taskList.map((task) => {
         return (
