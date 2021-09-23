@@ -1,0 +1,20 @@
+/*
+  CSS Styles for the TaskBar Component
+*/
+
+.addTask {
+  width: 70%;
+  padding: 25px;
+  font-size: 24px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 15px 15px;
+}
+
+.addTaskButton {
+  width: 20%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 25px;
+  font-size: 24px;
+}
