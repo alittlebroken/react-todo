@@ -13,7 +13,7 @@ function TaskList(props){
   if(!taskList || taskList.length === 0){
     return (
       <div>
-        <h2>Current Task List</h2>
+        <h2>{props.title}</h2>
         <p>
           There are currently no active tasks. Perhaps we should add one above.
         </p>
@@ -31,6 +31,8 @@ function TaskList(props){
             key={`${taskIndex}-%{task}`}
             task={task}
             onRemove={props.onRemove}
+            onCloseTask={props.onCloseTask}
+            onOpen={props.onOpen}
             />
         );
       })}
