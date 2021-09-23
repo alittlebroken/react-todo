@@ -16,7 +16,10 @@ function TaskList(props){
 
       {taskList.map((task) => {
         return (
-          <Task task={task} />
+          <Task
+            task={task}
+            onRemove={props.onRemove}
+            />
         );
       })}
     </div>
