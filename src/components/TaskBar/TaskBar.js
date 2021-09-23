@@ -21,6 +21,7 @@ function TaskBar(props){
     <div>
 
         <input
+          value={taskName}
           placeholder="Enter task name"
           onChange={handleChange} />
 
