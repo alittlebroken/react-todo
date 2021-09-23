@@ -50,6 +50,7 @@ function App() {
     <div className="App">
       <TaskBar onAdd={addTask} />
       <TaskList
+        title="Current Tasks"
         tasks={tasks}
         onRemove={removeTask} />
     </div>
