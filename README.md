@@ -2,6 +2,10 @@
 
 My very own take on a simple and humble ToDo list with no backend.
 
+### Live Site
+
+- [damp-lift.surge.sh](http://damp-lift.surge.sh/)
+
 ### Built with
 - [React](https://react.com)
 
@@ -50,3 +54,7 @@ surge
 ```
 
 accept all the defaults and type into your browser the url given to you by surge on Successful publish
+
+## Roadmap
+
+See the [open issues](https://github.com/alittlebroken/react-todo/issues) for a list of proposed features (and known issues).
