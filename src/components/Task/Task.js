@@ -36,13 +36,13 @@ function Task(props){
 
   // Render our task to the screen
   return (
-    <div>
-      <h3 id="1">
-        {task.name}
+
+      <div class="taskContainer">
+        <div>{task.name}</div>
         <button onClick={removeTrack}>REMOVE</button>
         {renderOpenCloseAction()}
-      </h3>
-    </div>
+      </div>
+
   );
 
 }

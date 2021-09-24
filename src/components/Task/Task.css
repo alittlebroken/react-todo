@@ -1,0 +1,28 @@
+.taskContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 75px 75px;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  justify-self: start;
+  margin: 5px 0;
+}
+
+.taskContainer div {
+  text-align: left;
+  padding: 5px;
+}
+
+.taskContainer button {
+  border: 2px solid dodgerblue;
+  color: dodgerblue;
+  font-weight: bold;
+  background-color: white;
+}
+
+.taskContainer button:hover {
+  border: 2px solid dodgerblue;
+  color: white;
+  font-weight: bold;
+  background-color: dodgerblue;
+}

@@ -106,7 +106,7 @@ function App() {
 
   return (
     <div className="App">
-
+    
       <TaskBar onAdd={addTask} />
 
       <div className="ListContainer">

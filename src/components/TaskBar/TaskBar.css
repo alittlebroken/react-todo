@@ -6,6 +6,8 @@
   display: flex;
   grid-template-columns: 70% 20%;
   margin: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.3);
 }
 
 .addTask {

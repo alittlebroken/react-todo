@@ -12,17 +12,18 @@ function TaskList(props){
 
   if(!taskList || taskList.length === 0){
     return (
-      <div>
+      <div className="card-tasklist">
         <h2>{props.title}</h2>
         <p>
-          There are currently no active tasks. Perhaps we should add one above.
+          There are currently no active tasks.
+          Perhaps we should add one above.
         </p>
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="card-tasklist">
       <h2>{props.title}</h2>
 
       {taskList.map((task, taskIndex) => {
