@@ -4,6 +4,7 @@ import './TaskList.css';
 // Custom component Imports
 import Task from '../Task/Task';
 
+
 // Main functional component
 function TaskList(props){
 
@@ -26,14 +27,16 @@ function TaskList(props){
     <div className="card-tasklist">
       <h2>{props.title}</h2>
 
-      {taskList.map((task, taskIndex) => {
+      {taskList.map((task) => {
         return (
           <Task
-            key={`${taskIndex}-%{task}`}
+            key={task.id}
             task={task}
             onRemove={props.onRemove}
             onCloseTask={props.onCloseTask}
             onOpen={props.onOpen}
+            onEnableUpdate={props.onEnableUpdate}
+            onUpdate={props.onUpdate}
             />
         );
       })}
