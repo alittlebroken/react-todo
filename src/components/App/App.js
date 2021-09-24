@@ -146,55 +146,6 @@ function App() {
 
       </div>
 
-      <div className="issues">
-        <h2>Current Issues</h2>
-
-        <p>
-          <button>&#128369;</button>
-          <strike>
-            New tasks all have the same ID.
-          </strike>
-        </p>
-
-        <p>
-          <button>&#128369;</button>
-          When you close or refresh the browser you lose all tasks you entered.
-        </p>
-
-        <p>
-          <button>&#128369;</button>
-          <strike>
-            After a first edit all subsequent edits take the name from
-            the first edit.
-          </strike>
-        </p>
-
-        <p>
-          <button>&#128369;</button>
-          <strike>
-            If editing more than one task name at a time, and you click save only
-            the task whose Save button was ticked has the changes saved.
-          </strike>
-        </p>
-
-        <p>
-          <button>&#128369;</button>
-          If you close a task whilst in edit mode and start making changes but
-          then close the task, then the name of the task in the completed list
-          has the edited name and not the original name.
-        </p>
-
-        <p>
-          <button>&#128369;</button>
-          <strike>
-            If you are editing an open task and then reopen an old task then the
-            task being edited loses any changes you made, but it remains in edit
-            mode.
-          </strike>
-        </p>
-
-      </div>
-
     </div>
   );
 }
