@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 // Import custom compenents
 import TaskBar from '../TaskBar/TaskBar';
@@ -17,6 +17,7 @@ function App() {
     setTasks((prev) => {
       return prev.filter(taskItem => taskItem.id !== task.id);
     });
+
   };
 
   const [closedTasks, setClosedTasks] = useState([]);
@@ -39,10 +40,26 @@ function App() {
 
   };
 
+  // Load the initial data
+  useEffect(() => {
+    fetchTasks();
+  }, []);
+
+  // Save the open tasks whenever they are updated
+  useEffect(() => {
+    saveOpenTasks();
+  }, [tasks]);
+
+  // Save the closed task list whenever it is updated
+  useEffect(() => {
+    saveClosedTasks();
+  }, [closedTasks]);
+
   const removeClosedTask = (task) => {
     setClosedTasks((prev) => {
       return prev.filter(taskItem => taskItem.id !== task.id);
     });
+
   };
 
   /* Parent Remove Task function that calls in the function to remove the
@@ -66,7 +83,6 @@ function App() {
         edit: 'no'
       }, ...prev];
     });
-
   };
 
   // Enable update for task
@@ -121,6 +137,38 @@ function App() {
 
     // remove task from the closed list
     removeClosedTask(task);
+
+  };
+
+  // Load tasks from localStorage
+  const fetchTasks = () => {
+
+    // Open tasks
+    const openTasks = JSON.parse(localStorage.getItem('openTasks'));
+    if(openTasks){
+      setTasks(openTasks);
+    } else {
+      setTasks([]);
+    }
+
+    // Closed tasks
+    const closedTasks = JSON.parse(localStorage.getItem('closedTasks'));
+    if(closedTasks){
+      setClosedTasks(closedTasks);
+    } else {
+      setClosedTasks([]);
+    }
+
+  };
+
+  // save open task List
+  const saveOpenTasks = () => {
+    localStorage.setItem('openTasks', JSON.stringify(tasks));
+  };
+
+  // save closed task list
+  const saveClosedTasks = () => {
+    localStorage.setItem('closedTasks', JSON.stringify(closedTasks));
   };
 
   return (
